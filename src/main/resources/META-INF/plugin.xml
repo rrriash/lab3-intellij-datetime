@@ -1,0 +1,23 @@
+<idea-plugin>
+  <id>com.example.datetimeplugin</id>
+  <name>DateTime Plugin</name>
+  <vendor email="you@example.com">Your Name</vendor>
+
+  <!-- Явно укажем совместимость для редактора (Gradle тоже это проставит на сборке) -->
+  <idea-version since-build="232" until-build="242.*"/>
+
+  <!-- Короткое описание, чтобы инспекции не ругались -->
+  <description>Minimal plugin: Tools → Show Date/Time</description>
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <actions>
+    <action id="com.example.datetimeplugin.ShowDateTimeAction"
+            class="com.example.datetimeplugin.ShowDateTimeAction"
+            text="Show Date/Time"
+            description="Shows the current date and time">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt Y"/>
+    </action>
+  </actions>
+</idea-plugin>
